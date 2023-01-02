@@ -6,6 +6,18 @@
  * @package purpleWeb
  */
 
+
+echo '<pre>';
+print_r(PURPLEWEB_DIR_PATH);
+wp_die();
+
+
+if(!defined('PURPLEWEB_DIR_PATH')) {
+    define('PURPLEWEB_DIR_PATH', untrailingslashit(get_template_directory()));
+}
+
+require_once 'PURPLEWEB_DIR_PATH' . '/inc/helpers/autoloader.php';
+
 function purpleweb_enqueue_scripts() {
     // Register styles
     wp_register_style('style-css', get_stylesheet_uri(),[], filemtime
