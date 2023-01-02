@@ -2,10 +2,10 @@
 /**
  * Autoloader file for theme.
  *
- * @package Aquila
+ * @package PurpleWeb
  */
 
-namespace PURPLEWEB\Inc\Helpers;
+namespace PURPLEWEB_THEME\Inc\Helpers;
 
 /**
  * Auto loader function.
@@ -16,7 +16,7 @@ namespace PURPLEWEB\Inc\Helpers;
  */
 function autoloader( $resource = '' ) {
 	$resource_path  = false;
-	$namespace_root = 'AQUILA_THEME\\';
+	$namespace_root = 'PURPLEWEB_THEME\\';
 	$resource       = trim( $resource, '\\' );
 
 	if ( empty( $resource ) || strpos( $resource, '\\' ) === false || strpos( $resource, $namespace_root ) !== 0 ) {
@@ -85,4 +85,4 @@ function autoloader( $resource = '' ) {
 
 }
 
-spl_autoload_register( '\PURPLEWEB\Inc\Helpers\Inc\Helpers\autoloader' );
+spl_autoload_register( '\PURPLEWEB_THEME\Inc\Helpers\autoloader' );
