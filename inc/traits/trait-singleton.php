@@ -1,10 +1,10 @@
 <?php
 
-namespace PURPLEWEB\Inc\Traits;
+namespace PurpleWeb_Theme\Inc\Traits;
 
 trait Singleton {
-    public function __construct()
-    {
+
+    public function __construct(){
     }
 
     public function __clone() {
@@ -12,6 +12,7 @@ trait Singleton {
     }
 
     final public static function get_instance() {
+
         static $instance = [];
 
         $called_class = get_called_class();

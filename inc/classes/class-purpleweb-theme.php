@@ -7,13 +7,16 @@
 
 namespace PURPLEWEB_THEME\Inc;
 
-use PURPLEWEB\Inc\Traits\Singleton;
+
+
+use PurpleWeb_Theme\Inc\Traits\Singleton;
 
 class PURPLEWEB_THEME {
+
     use Singleton;
 
-    protected function __construct()
-    {
+    protected function __construct() {
+        wp_die('Hello World');
         // load class.
         $this->set_hooks();
     }
