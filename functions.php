@@ -12,6 +12,8 @@ if(!defined('PURPLEWEB_DIR_PATH')) {
 
 require_once PURPLEWEB_DIR_PATH . '/inc/helpers/autoloader.php';
 
+\PURPLEWEB_THEME\Inc\PURPLEWEB_THEME::get_instance();
+
 function purpleweb_enqueue_scripts() {
     // Register styles
     wp_register_style('style-css', get_stylesheet_uri(),[], filemtime
