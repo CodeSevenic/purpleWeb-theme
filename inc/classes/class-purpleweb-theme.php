@@ -20,5 +20,15 @@ class PURPLEWEB_THEME {
 
     protected function set_hooks() {
         // action and filters
+        add_action('wp_enqueue_scripts', 'purpleweb_enqueue_scripts');
+
+    }
+
+    public function register_styles() {
+
+    }
+
+    public function register_scripts() {
+
     }
 }

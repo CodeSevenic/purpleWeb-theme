@@ -44,4 +44,3 @@ function purpleweb_enqueue_scripts() {
     wp_enqueue_script('bootstrap-js');
 }
 
-add_action('wp_enqueue_scripts', 'purpleweb_enqueue_scripts');
