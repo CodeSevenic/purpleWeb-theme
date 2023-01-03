@@ -15,10 +15,10 @@ class PURPLEWEB_THEME {
 
     protected function __construct() {
         // load class.
-        $this->set_hooks();
+        $this->setup_hooks();
     }
 
-    protected function set_hooks() {
+    protected function setup_hooks() {
         // action and filters
         add_action('wp_enqueue_scripts', 'purpleweb_enqueue_scripts');
 
