@@ -19,7 +19,9 @@ class PURPLEWEB_THEME {
     }
 
     protected function setup_hooks() {
-        // action and filters
+        /**
+         * Actions.
+         */
         add_action('wp_enqueue_scripts', [$this, 'register_styles']);
         add_action('wp_enqueue_scripts', [$this, 'register_scripts']);
 
