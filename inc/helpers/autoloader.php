@@ -40,6 +40,7 @@ function autoloader( $resource = '' ) {
 		return;
 	}
 
+
 	$directory = '';
 	$file_name = '';
 
