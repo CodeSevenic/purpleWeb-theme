@@ -16,8 +16,9 @@ class PURPLEWEB_THEME
 
     protected function __construct()
     {
-        // load class.
+        // Load class.
         Assets::get_instance();
+        Menus::get_instance();
 
         $this->setup_hooks();
     }

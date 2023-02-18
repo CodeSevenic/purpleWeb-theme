@@ -27,9 +27,9 @@ class Menus {
     }
 
     public function register_menus(): void {
-        register_nav_menu([
-            'purpleweb-header-menu' => __('Header Menu'),
-            'purpleweb-footer-menu' => __('Footer Menu')
+        register_nav_menus([
+            'purpleweb-header-menu' => esc_html__('Header Menu', 'purpleweb'),
+            'purpleweb-footer-menu' => esc_html__('Footer Menu', 'purpleweb')
         ]);
     }
 }
