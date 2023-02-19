@@ -11,7 +11,6 @@ use PURPLEWEB_THEME\Inc\Traits\Singleton;
 
 class PURPLEWEB_THEME
 {
-    
     use Singleton;
 
     protected function __construct()
