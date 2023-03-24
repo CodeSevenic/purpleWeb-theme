@@ -32,4 +32,12 @@ class Menus {
             'purpleweb-footer-menu' => esc_html__('Footer Menu', 'purpleweb')
         ]);
     }
+
+    public function get_menu_id($location) {
+        // Get all the locations.
+        $locations = get_nav_menu_locations();
+
+        // Get object id by location
+        $menu_id = $locations[$location];
+    }
 }
