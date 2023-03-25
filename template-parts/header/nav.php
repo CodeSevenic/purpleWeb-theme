@@ -50,7 +50,7 @@ $header_menus = wp_get_nav_menu_items($header_menu_id);
                                     <?php
                                         foreach ($child_menu_items as $child_menu_item) { ?>
                                             <a class="dropdown-item" href="<?php echo esc_url($child_menu_item->url); ?>">
-                                                <?php echo esc_html($menu_item->title); ?>
+                                                <?php echo esc_html($child_menu_item->url); ?>
                                             </a>
                                       <?php  }
                                     ?>
