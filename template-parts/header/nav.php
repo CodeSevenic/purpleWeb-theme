@@ -32,7 +32,7 @@ $header_menus = wp_get_nav_menu_items($header_menu_id);
                     foreach ($header_menus as $menu_item) {
                         if(!$menu_item->menu_item_parent) {
                             $child_menu_items = $menu_class->get_child_menu_items($header_menus, $menu_item->ID);
-                            
+                            $has_children = ! empty($child_menu_items) && is_array($child_menu_items);
                             ?>
                             <li class="nav-item">
                                 <a class="nav-link" href="#">Link</a>
