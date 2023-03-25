@@ -33,10 +33,13 @@ $header_menus = wp_get_nav_menu_items($header_menu_id);
                         if(!$menu_item->menu_item_parent) {
                             $child_menu_items = $menu_class->get_child_menu_items($header_menus, $menu_item->ID);
                             $has_children = ! empty($child_menu_items) && is_array($child_menu_items);
+                            if(!$has_children) {?>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Link</a>
+                                </li>
+                                    <?php }
                             ?>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Link</a>
-                            </li>
+
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     Dropdown
