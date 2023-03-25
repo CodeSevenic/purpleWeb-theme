@@ -36,16 +36,24 @@ $header_menus = wp_get_nav_menu_items($header_menu_id);
                         $has_children = !empty($child_menu_items) && is_array($child_menu_items);
                         if (!$has_children) { ?>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Link</a>
+                                <a class="nav-link" href="<?php echo esc_url($menu_item->url); ?>">
+                                    <?php echo esc_html($menu_item->title); ?>
+                                </a>
                             </li>
                         <?php } else { ?>
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                <a class="nav-link dropdown-toggle" href="<?php echo esc_url($menu_item->url); ?>" id="navbarDropdown" role="button"
                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Dropdown
+                                    <?php echo esc_html($menu_item->title); ?>
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="#">Action</a>
+                                    <?php
+                                        foreach ($child_menu_items as $child_menu_item) { ?>
+                                            <a class="dropdown-item" href="<?php echo esc_url($child_menu_item->url); ?>">
+                                                <?php echo esc_html($menu_item->title); ?>
+                                            </a>
+                                      <?php  }
+                                    ?>
                                 </div>
                             </li>
                         <?php }
