@@ -49,9 +49,11 @@ class Menus {
         if (!empty($menu_array) && is_array($menu_array)) {
             foreach ($menu_array as $menu) {
                 if(intval($menu->menu_item_parent) === $parent_id) {
-                    
+                    $child_menus[] = $menu;
                 }
             }
         }
+
+        return $child_menus;
     }
 }
