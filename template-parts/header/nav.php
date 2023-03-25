@@ -26,11 +26,13 @@ $header_menus = wp_get_nav_menu_items($header_menu_id);
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <?php
-        if(!empty($header_menus) && is_array($header_menus)) { ?>
+        if(!empty($header_menus) && is_array($header_menus)) {?>
             <ul class="navbar-nav mr-auto">
                 <?php
                     foreach ($header_menus as $menu_item) {
-                        if(!$menu_item->menu_item_parent) { ?>
+                        if(!$menu_item->menu_item_parent) {
+                            $child_menu_items = $menu_class->get_child_menu_items($header_menus, $menu_item->ID);
+                            ?>
                             <li class="nav-item">
                                 <a class="nav-link" href="#">Link</a>
                             </li>
