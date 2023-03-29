@@ -21,12 +21,16 @@ get_header();
                     </header>
               <?php  }
                 ?>
-                <?php
+                <div class="row">
+                    <?php
+                    $index = 0;
+                    $no_of_columns = 3;
                     while (have_posts()) : the_post();
                         the_title();
                         the_excerpt();
                     endwhile;
-                ?>
+                    ?>
+                </div>
             </div>
        <?php }
         ?>
