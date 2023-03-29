@@ -7,8 +7,10 @@
 get_header();
 ?>
 
-<div class="content">
-  Hello World Version
+<div id="primary">
+    <main id="main" class="site-main mt-5">
+        
+    </main>
 </div>
 
 <?php
