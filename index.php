@@ -31,8 +31,9 @@ get_header();
                                 <div class="col-lg-4 col-md-6 col-sm-12">
 
 
-                            <?php }
-
+                            <?php } ?>
+                                
+                            <?php
                             $index++;
 
                             if (0 !== $index && 0 === $index % $no_of_columns) { ?>
