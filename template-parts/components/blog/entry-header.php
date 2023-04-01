@@ -14,7 +14,7 @@ $has_post_thumbnail = get_the_post_thumbnail($the_post_id);
     if($has_post_thumbnail) {?>
         <div class="entry-image mb-3">
             <a href="<?php echo esc_url( get_permalink()); ?>">
-                
+
             </a>
         </div>
     <?php }
