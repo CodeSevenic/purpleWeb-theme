@@ -11,5 +11,11 @@ function get_the_post_custom_thumbnail($post_id, $size = 'featured-image', $addi
         $default_attributes = [
                 'loading' => 'lazy'
         ];
+
+        $additional_attributes = array_merge($additional_attributes, $default_attributes);
+
+        $custom_thumbnail = wp_get_attachment_image(
+                
+        )
     }
 }
