@@ -11,5 +11,8 @@ $has_post_thumbnail = get_the_post_thumbnail($the_post_id);
 <header class="entry-header">
     <?php
     // Featured Image
+    if($has_post_thumbnail) {?>
+
+    <?php }
     ?>
 </header>
