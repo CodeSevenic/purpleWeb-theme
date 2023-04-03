@@ -26,6 +26,7 @@ class Meta_Boxes
          * Actions.
          */
         add_action('add_meta_boxes', [$this, 'add_custom_meta_box']);
+        add_action('save_post', [$this, 'save_post_meta_data']);
     }
 
     public function add_custom_meta_box()
@@ -43,11 +44,12 @@ class Meta_Boxes
         }
     }
 
-    public function custom_meta_box_html($post){
+    public function custom_meta_box_html($post)
+    {
         $value = get_post_meta($post->ID, '_hide_page_title', true);
         ?>
-        <label for="purbleweb-field"><?php esc_html_e('Hide the page title', 'purpleweb'); ?></label>
-        <select name="purbleweb_field" id="purbleweb-field" class="postbox">
+        <label for="purpleweb-field"><?php esc_html_e('Hide the page title', 'purpleweb'); ?></label>
+        <select name="purpleweb_hide_title_field" id="purpleweb-field" class="postbox">
             <option value=""><?php esc_html_e('Please select', 'purpleweb'); ?></option>
             <option value="yes" <?php selected($value, 'yes'); ?>>
                 <?php esc_html_e('Yes', 'purpleweb'); ?>
@@ -56,6 +58,18 @@ class Meta_Boxes
                 <?php esc_html_e('No', 'purpleweb'); ?>
             </option>
         </select>
-<?php
+        <?php
+    }
+
+    public function save_post_meta_data($post_id): void
+    {
+        if (array_key_exists('purpleweb_hide_title_field',$_POST)) {
+            update_post_meta(
+                $post_id,
+                '_hide_page_title',
+                $_POST['purpleweb_hide_title_field']
+
+            );
+        }
     }
 }
