@@ -5,6 +5,7 @@
  * @package purpleWeb
  */
 $the_post_id = get_the_ID();
+$hide_title = get_
 $has_post_thumbnail = get_the_post_thumbnail($the_post_id);
 ?>
 
