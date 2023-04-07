@@ -23,6 +23,7 @@ $has_post_thumbnail = get_the_post_thumbnail($the_post_id);
                                 'class' => 'attachment-featured-large size-featured-image'
                             ]);
                     ?>
+                
             </a>
         </div>
     <?php }
