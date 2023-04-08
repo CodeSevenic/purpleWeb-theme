@@ -75,6 +75,11 @@ class Meta_Boxes
             return;
         }
 
+        /**
+         * Check if the nonce value we received is the same we created.
+         */
+        if (! isset())
+
         if (array_key_exists('purpleweb_hide_title_field',$_POST)) {
             update_post_meta(
                 $post_id,
