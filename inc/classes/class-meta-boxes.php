@@ -67,6 +67,10 @@ class Meta_Boxes
 
     public function save_post_meta_data($post_id): void
     {
+        /**
+         * When the post is saved or updated we get $_POST available
+         * Check if the current user is authorized
+         */
         if (array_key_exists('purpleweb_hide_title_field',$_POST)) {
             update_post_meta(
                 $post_id,
