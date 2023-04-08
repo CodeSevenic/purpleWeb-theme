@@ -89,3 +89,18 @@ function purpleweb_the_excerpt($trim_character_count = 0): void
 
     echo $excerpt . ' [...]';
 }
+
+/**
+ * function to display a read more option
+ */
+function purpleweb_excerpt_more($more = '')
+{
+    if (!is_single()) {
+        $more = sprintf('<button class="mt-4 btn btn-info"><a class="purpleweb-read-more text-white" href="%1$s" >%2$s</a></button>',
+            get_permalink(get_the_ID()),
+            __('Read more', 'purpleweb')
+        );
+    }
+
+    return $more;
+}

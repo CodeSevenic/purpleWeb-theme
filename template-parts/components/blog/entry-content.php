@@ -25,6 +25,7 @@
         );
     } else {
         purpleweb_the_excerpt(200);
+        echo purpleweb_excerpt_more();
     }
     ?>
 </div>
