@@ -71,6 +71,10 @@ class Meta_Boxes
          * When the post is saved or updated we get $_POST available
          * Check if the current user is authorized
          */
+        if (! current_user_can('edit_post', $post_id)) {
+
+        }
+        
         if (array_key_exists('purpleweb_hide_title_field',$_POST)) {
             update_post_meta(
                 $post_id,
