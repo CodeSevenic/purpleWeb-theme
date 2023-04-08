@@ -50,7 +50,7 @@ class Meta_Boxes
         /**
          * Use nonce for verification
          */
-        wp_nonce_field( plugin_basename() );
+        wp_nonce_field( plugin_basename(__FILE__), 'hide_title_meta_box_nonce_name' );
         ?>
         <label for="purpleweb-field"><?php esc_html_e('Hide the page title', 'purpleweb'); ?></label>
         <select name="purpleweb_hide_title_field" id="purpleweb-field" class="postbox">
