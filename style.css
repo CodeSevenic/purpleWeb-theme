@@ -28,3 +28,13 @@ a.custom-logo-link {
     max-width: 60px;
     display: block;
 }
+
+/* Entry meta */
+.updated:not(.published) {
+    display: none;
+}
+
+/* Nav item */
+.nav-item:hover .dropdown-menu:not(.show) {
+    display: block;
+}

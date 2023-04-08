@@ -79,7 +79,7 @@ class Meta_Boxes
          * Check if the nonce value we received is the same we created.
          */
         if (!isset($_POST['hide_title_meta_box_nonce_name']) ||
-            !wp_verify_nonce(plugin_basename(__FILE__), $_POST['hide_title_meta_box_nonce_name'])) {
+            !wp_verify_nonce( $_POST['hide_title_meta_box_nonce_name'], plugin_basename(__FILE__))) {
             return;
         }
 
