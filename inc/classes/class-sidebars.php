@@ -41,7 +41,7 @@ class Sidebars
         ]);
         register_sidebar([
             'name' => __('Footer', 'purpleWeb'),
-            'id' => 'sidebar-1',
+            'id' => 'sidebar-2',
             'description' => __('Footer sidebar', 'purpleWeb'),
             'before_widget' => '<div id="%1$s" class="widget %2$s">',
             'after_widget' => '</div>',
