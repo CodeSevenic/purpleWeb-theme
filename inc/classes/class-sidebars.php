@@ -31,8 +31,10 @@ class Sidebars
     public function register_sidebars(): void
     {
         register_sidebar(array(
-            'name' => __('Primary Sidebar', 'purpleWeb'),
-            'id' => 'sidebar-1'
+            'name' => __('Sidebar', 'purpleWeb'),
+            'id' => 'sidebar-1',
+            'description' => __('Main sidebar', 'purpleWeb'),
+            
         ))
     }
 }
