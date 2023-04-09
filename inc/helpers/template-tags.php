@@ -110,6 +110,5 @@ function purpleweb_excerpt_more($more = '')
  */
 function purpleweb_pagination(): void
 {
-    previous_post_link();
-    next_post_link();
+    printf('<nav class="purpleweb-pagination clearfix">%s</nav>')
 }
