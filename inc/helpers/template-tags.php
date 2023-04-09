@@ -121,7 +121,7 @@ function purpleweb_pagination(): void
     ];
     $args = [
         'before_page_number' => '<span class="btn border border-secondary mr-2 mb-2">',
-        'after_page_number' => ''
+        'after_page_number' => '</span>'
     ];
 
     printf('<nav class="purpleweb-pagination clearfix">%s</nav>', wp_kses(paginate_links($args), $allowed_tags));
