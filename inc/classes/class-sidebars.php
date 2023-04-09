@@ -43,7 +43,7 @@ class Sidebars
             'name' => __('Footer', 'purpleWeb'),
             'id' => 'sidebar-2',
             'description' => __('Footer sidebar', 'purpleWeb'),
-            'before_widget' => '<div id="%1$s" class="widget %2$s">',
+            'before_widget' => '<div id="%1$s" class="widget widget-footer cell column %2$s">',
             'after_widget' => '</div>',
             'before_title' => '<h3 class="widget-title">',
             'after_title' => '</h3>'
