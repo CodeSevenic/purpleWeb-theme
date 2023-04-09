@@ -39,5 +39,14 @@ class Sidebars
             'before_title' => '<h3 class="widget-title">',
             'after_title' => '</h3>'
         ]);
+        register_sidebar([
+            'name' => __('Sidebar', 'purpleWeb'),
+            'id' => 'sidebar-1',
+            'description' => __('Main sidebar', 'purpleWeb'),
+            'before_widget' => '<div id="%1$s" class="widget %2$s">',
+            'after_widget' => '</div>',
+            'before_title' => '<h3 class="widget-title">',
+            'after_title' => '</h3>'
+        ]);
     }
 }
