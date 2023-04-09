@@ -104,3 +104,12 @@ function purpleweb_excerpt_more($more = '')
 
     return $more;
 }
+
+/**
+ * function to paginate pasts
+ */
+function purpleweb_pagination(): void
+{
+    previous_post_link();
+    next_post_link();
+}
