@@ -38,3 +38,9 @@ a.custom-logo-link {
 .nav-item:hover .dropdown-menu:not(.show) {
     display: block;
 }
+
+/* Pagination */
+.page-numbers.current > span {
+    background-color: gray;
+    color: #fff;
+}
