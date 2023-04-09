@@ -40,7 +40,7 @@ class Sidebars
             'after_title' => '</h3>'
         ]);
         register_sidebar([
-            'name' => __('Sidebar', 'purpleWeb'),
+            'name' => __('Footer', 'purpleWeb'),
             'id' => 'sidebar-1',
             'description' => __('Main sidebar', 'purpleWeb'),
             'before_widget' => '<div id="%1$s" class="widget %2$s">',
