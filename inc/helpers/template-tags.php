@@ -110,5 +110,19 @@ function purpleweb_excerpt_more($more = '')
  */
 function purpleweb_pagination(): void
 {
-    printf('<nav class="purpleweb-pagination clearfix">%s</nav>')
+    $allowed_tags = [
+        'span' => [
+            'class' => []
+        ],
+        'a' => [
+            'class' => [],
+            'href' => []
+        ]
+    ];
+    $args = [
+        'before_page_number' => '<span class="btn border border-secondary mr-2 mb-2">',
+        'after_page_number' => ''
+    ];
+
+    printf('<nav class="purpleweb-pagination clearfix">%s</nav>', wp_kses(paginate_links($args), $allowed_tags));
 }
