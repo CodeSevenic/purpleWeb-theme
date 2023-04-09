@@ -30,7 +30,7 @@ class Sidebars
 
     public function register_sidebars(): void
     {
-        register_sidebar(array(
+        register_sidebar([
             'name' => __('Sidebar', 'purpleWeb'),
             'id' => 'sidebar-1',
             'description' => __('Main sidebar', 'purpleWeb'),
@@ -38,6 +38,6 @@ class Sidebars
             'after_widget' => '</div>',
             'before_title' => '<h3 class="widget-title">',
             'after_title' => '</h3>'
-        ));
+        ]);
     }
 }
