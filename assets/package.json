@@ -1,0 +1,54 @@
+{
+  "name": "purpleweb",
+  "version": "1.0.0",
+  "description": "PurpleWeb theme packages",
+  "main": "src/js/main.js",
+  "scripts": {
+    "prod": "cross-env NODE_ENV=production webpack --mode production --progress",
+    "dev": "cross-env NODE_ENV=development webpack --watch --mode development --progress",
+    "clean": "rm -rf build/*"
+  },
+  "keywords": [
+    "wordpress",
+    "themes"
+  ],
+  "author": "Sibsusiso Shongwe",
+  "license": "MIT",
+  "private": "true",
+  "browserslist": [
+    "defaults"
+  ],
+  "devDependencies": {
+    "@babel/core": "^7.20.2",
+    "@babel/preset-env": "^7.20.2",
+    "@babel/preset-react": "^7.18.6",
+    "@svgr/cli": "^5.5.0",
+    "babel-loader": "^8.3.0",
+    "clean-webpack-plugin": "^3.0.0",
+    "copy-webpack-plugin": "^6.4.1",
+    "cross-env": "^7.0.3",
+    "css-loader": "^4.3.0",
+    "cssnano": "^4.1.11",
+    "eslint": "^7.32.0",
+    "eslint-config-wordpress": "^2.0.0",
+    "eslint-loader": "^4.0.2",
+    "eslint-plugin-jsdoc": "^30.7.13",
+    "file-loader": "^6.2.0",
+    "lodash": "^4.17.21",
+    "mini-css-extract-plugin": "^0.9.0",
+    "optimize-css-assets-webpack-plugin": "^5.0.8",
+    "sass-loader": "^9.0.3",
+    "sass-mq": "^6.0.0",
+    "style-loader": "^1.3.0",
+    "stylelint": "^13.13.1",
+    "stylelint-config-wordpress": "^17.0.0",
+    "stylelint-webpack-plugin": "^2.4.0",
+    "uglifyjs-webpack-plugin": "^2.2.0",
+    "webpack": "^4.46.0",
+    "webpack-cli": "^3.3.12"
+  },
+  "dependencies": {
+    "sass": "^1.56.1",
+    "zustand": "^4.1.4"
+  }
+}

@@ -22,6 +22,9 @@ img {
     height: auto;
 }
 
+body {
+    font-family: 'Lato', sans-serif !important;
+}
 
 /* ============ Header CSS ============*/
 a.custom-logo-link {
