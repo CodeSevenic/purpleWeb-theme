@@ -31,17 +31,24 @@ const rules = [
         exclude: /node_modules/,
         use: [
             MiniCssExtractPlugin.loader,
-            'css-loader'
+            'css-loader',
+            'sass-loader'
         ]
     },
     {
-        test: /\.(png|jpg|svg|jpeg|gif|ico)$/,
+        test: /\.(png|jpg|jpeg|gif|ico|woff(2)?|ttf|eot|svg|otf)$/,
         use: [
             {
                 loader: 'file-loader',
                 options: {
                     name: '[path][name].[ext]',
-                    publicPath: 'production' === process.env.NODE_ENV ? '../' : '../../'
+                    publicPath: 'production' === process.env.NODE_ENV ? '../' : '../../',
+                    // outputPath: (url, resourcePath, context) => {
+                    //     if (/\.woff(2)?|ttf|eot|svg|otf$/.test(url)) {
+                    //         return `fonts/${url}`;
+                    //     }
+                    //     return `images/${url}`;
+                    // },
                 },
             },
         ],
