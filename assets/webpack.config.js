@@ -36,19 +36,13 @@ const rules = [
         ]
     },
     {
-        test: /\.(png|jpg|jpeg|gif|ico|woff(2)?|ttf|eot|svg|otf)$/,
+        test: /\.(png|jpg|svg|jpeg|gif|ico)$/,
         use: [
             {
                 loader: 'file-loader',
                 options: {
                     name: '[path][name].[ext]',
                     publicPath: 'production' === process.env.NODE_ENV ? '../' : '../../',
-                    // outputPath: (url, resourcePath, context) => {
-                    //     if (/\.woff(2)?|ttf|eot|svg|otf$/.test(url)) {
-                    //         return `fonts/${url}`;
-                    //     }
-                    //     return `images/${url}`;
-                    // },
                 },
             },
         ],

@@ -35,7 +35,7 @@ if(!defined('PURPLEWEB_BUILD_CSS_URI')) {
 }
 // CSS Directory path
 if(!defined('PURPLEWEB_BUILD_CSS_DIR_PATH')) {
-    define('PURPLEWEB_BUILD_JS_CSS_PATH', untrailingslashit(get_template_directory()) . '/assets/build/css');
+    define('PURPLEWEB_BUILD_CSS_DIR_PATH', untrailingslashit(get_template_directory()) . '/assets/build/css');
 }
 require_once PURPLEWEB_DIR_PATH . '/inc/helpers/autoloader.php';
 require_once PURPLEWEB_DIR_PATH . '/inc/helpers/template-tags.php';
