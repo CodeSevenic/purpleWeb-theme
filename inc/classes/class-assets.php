@@ -40,7 +40,6 @@ class Assets {
 
         // Enqueue styles
         wp_enqueue_style('bootstrap-css');
-        //wp_enqueue_style('fonts-css', get_template_directory_uri() . '/assets/src/library/fonts/fonts.css', [], false, 'all');
         wp_enqueue_style('style-css');
         wp_enqueue_style('main-css');
     }
