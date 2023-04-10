@@ -37,6 +37,7 @@ const rules = [
     },
     {
         test: /\.(png|jpg|svg|jpeg|gif|ico)$/,
+        exclude: '/src/library/fonts/',
         use: [
             {
                 loader: 'file-loader',
@@ -47,6 +48,17 @@ const rules = [
             },
         ],
     },
+    {
+        test: /\.(ttf|otf|eot|svg|woff(2)?)(\?[a-z0-9]+)?$/,
+        exclude: [ IMG_DIR, /node_modules/ ],
+        use: {
+            loader: 'file-loader',
+            options: {
+                name: '[path][name].[ext]',
+                publicPath: 'production' === process.env.NODE_ENV ? '../' : '../../'
+            }
+        }
+    }
 ]
 
 const plugins = (argv) => [
