@@ -18,7 +18,7 @@ class Assets {
         $this->setup_hooks();
     }
 
-    protected function setup_hooks()
+    protected function setup_hooks(): void
     {
         /**
          * Actions.
@@ -27,7 +27,7 @@ class Assets {
         add_action('wp_enqueue_scripts', [$this, 'register_scripts']);
     }
 
-    public function register_styles()
+    public function register_styles(): void
     {
         // Register styles
         wp_register_style('style-css', get_stylesheet_uri(), [], filemtime

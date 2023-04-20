@@ -21,6 +21,7 @@ class PURPLEWEB_THEME
         Menus::get_instance();
         Meta_Boxes::get_instance();
         Sidebars::get_instance();
+        Block_Patterns::get_instance();
 
         $this->setup_hooks();
     }
@@ -70,9 +71,18 @@ class PURPLEWEB_THEME
                 'style'
             ]
         );
-        add_editor_style();
+
         add_theme_support('wp-block-styles');
         add_theme_support('align-wide');
+        /**
+         * Loads the editor styles in the Gutenberg editor.
+         */
+        add_theme_support('editor-styles');
+        /**
+         * It allows you to link a custom stylesheet file to TinyMCE editor within the edit screen
+         */
+
+        add_editor_style('assets/build/css/editor.css');
 
         global $content_width;
         if (!isset($content_width)) {
