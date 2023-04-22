@@ -78,4 +78,5 @@ class Block_Patterns
             }
         }
     }
+    
 }
