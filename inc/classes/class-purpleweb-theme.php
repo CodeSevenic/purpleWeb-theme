@@ -81,7 +81,6 @@ class PURPLEWEB_THEME
         /**
          * It allows you to link a custom stylesheet file to TinyMCE editor within the edit screen
          */
-
         add_editor_style('assets/build/css/editor.css');
 
         global $content_width;
