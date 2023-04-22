@@ -25,6 +25,7 @@ class Block_Patterns
          * Actions.
          */
         add_action('init', [$this, 'register_block_patterns']);
+        add_action('init', [$this, 'register_block_pattern_categories']);
     }
 
     public function register_block_patterns()
