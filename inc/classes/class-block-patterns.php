@@ -59,4 +59,18 @@ class Block_Patterns
             );
         }
     }
+
+    public function register_block_pattern_categories()
+    {
+
+        $pattern_categories = [
+            'cover' => 'Cover'
+        ];
+
+        if (!empty($pattern_categories) && is_array($pattern_categories)) {
+            foreach ($pattern_categories as $pattern_category => $pattern_category_label) {
+                
+            }
+        }
+    }
 }
