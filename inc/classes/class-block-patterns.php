@@ -36,6 +36,7 @@ class Block_Patterns
                 [
                     'title' => __('PurpleWeb Cover', 'purpleweb'),
                     'description' => __('PurpleWeb Cover with Image and Text'),
+                    'categories' => ['cover'],
                     'content' => '<!-- wp:cover {"url":"http://localhost:10011/wp-content/uploads/2023/03/What-the-amended-bee-preferential-procurement-regulations-really-mean-02.png","id":59,"dimRatio":50,"isDark":false} -->
                                     <div class="wp-block-cover is-light"><span aria-hidden="true" class="wp-block-cover__background has-background-dim"></span><img class="wp-block-cover__image-background wp-image-59" alt="" src="http://localhost:10011/wp-content/uploads/2023/03/What-the-amended-bee-preferential-procurement-regulations-really-mean-02.png" data-object-fit="cover"/><div class="wp-block-cover__inner-container"><!-- wp:paragraph {"align":"center","placeholder":"Write title…","textColor":"white","fontSize":"large"} -->
                                     <p class="has-text-align-center has-white-color has-text-color has-large-font-size"><strong>Purple Web Cover Block</strong></p>
@@ -64,12 +65,16 @@ class Block_Patterns
     {
 
         $pattern_categories = [
-            'cover' => 'Cover'
+            'cover' => __('Cover', 'purpleweb'),
+            'carousel' => __('Carousel', 'purpleweb')
         ];
 
         if (!empty($pattern_categories) && is_array($pattern_categories)) {
             foreach ($pattern_categories as $pattern_category => $pattern_category_label) {
-                
+                register_block_pattern_category(
+                    $pattern_category,
+                    ['label' => $pattern_category_label]
+                );
             }
         }
     }
