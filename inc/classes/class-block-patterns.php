@@ -44,6 +44,10 @@ class Block_Patterns
                     'content' => $cover_content,
                 ]
             );
+            /**
+             * Cover pattern
+             */
+            $cover_content = $this->get_template_content('template-parts/patterns/cover');
             register_block_pattern(
                 'purpleweb/column',
                 [
