@@ -47,7 +47,7 @@ class Block_Patterns
             /**
              * Two Columns pattern
              */
-            $two_columns_content = $this->get_template_content('template-parts/patterns/cover');
+            $two_columns_content = $this->get_template_content('template-parts/patterns/two-columns');
             register_block_pattern(
                 'purpleweb/two-columns',
                 [
