@@ -45,14 +45,14 @@ class Block_Patterns
                 ]
             );
             /**
-             * Cover pattern
+             * Two Column pattern
              */
             $cover_content = $this->get_template_content('template-parts/patterns/cover');
             register_block_pattern(
                 'purpleweb/column',
                 [
-                    'title' => __('PurpleWeb Cover', 'purpleweb'),
-                    'description' => __('PurpleWeb Cover with Image and Text'),
+                    'title' => __('PurpleWeb Two Column', 'purpleweb'),
+                    'description' => __('PurpleWeb Two Column'),
                     'categories' => ['cover'],
                     'content' => $cover_content,
                 ]
