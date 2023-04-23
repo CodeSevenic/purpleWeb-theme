@@ -31,13 +31,10 @@ class Block_Patterns
     public function register_block_patterns()
     {
         if (function_exists('register_block_pattern')) {
-
-            ob_start();
-
-            get_template_part('template-parts/patterns/cover');
-            $cover_content = ob_get_contents();
-            ob_end_clean();
-
+            /**
+             * Cover pattern
+             */
+            $cover_content = $this->get_template_content('template-parts/patterns/cover');
             register_block_pattern(
                 'purpleweb/cover',
                 [
@@ -48,6 +45,18 @@ class Block_Patterns
                 ]
             );
         }
+    }
+
+    public function get_template_content($template_path): bool|string
+    {
+        ob_start();
+
+        get_template_part($template_path);
+
+        $pattern_content = ob_get_contents();
+        ob_end_clean();
+
+        return $pattern_content;
     }
 
     public function register_block_pattern_categories()
