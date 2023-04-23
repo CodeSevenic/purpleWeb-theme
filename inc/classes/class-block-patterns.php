@@ -34,7 +34,7 @@ class Block_Patterns
 
             ob_start();
 
-            get_template_part('template_parts/patterns/cover');
+            get_template_part('template-parts/patterns/cover');
             $cover_content = ob_get_contents();
             ob_end_clean();
 
