@@ -81,7 +81,7 @@ class Block_Patterns
     {
         $pattern_categories = [
             'cover' => __('Cover', 'purpleweb'),
-            'carousel' => __('Carousel', 'purpleweb')
+            'columns' => __('Columns', 'purpleweb')
         ];
 
         if (!empty($pattern_categories) && is_array($pattern_categories)) {
