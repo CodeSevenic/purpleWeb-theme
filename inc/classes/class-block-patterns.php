@@ -52,7 +52,7 @@ class Block_Patterns
                 'purpleweb/column',
                 [
                     'title' => __('PurpleWeb Two Columns', 'purpleweb'),
-                    'description' => __('PurpleWeb two columns'),
+                    'description' => __('PurpleWeb two columns with heading and text'),
                     'categories' => ['cover'],
                     'content' => $cover_content,
                 ]
