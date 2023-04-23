@@ -31,13 +31,20 @@ class Block_Patterns
     public function register_block_patterns()
     {
         if (function_exists('register_block_pattern')) {
+
+            ob_start();
+
+            get_template_part('template_parts/patterns/cover');
+            $cover_content = ob_get_contents();
+            ob_end_clean();
+
             register_block_pattern(
                 'purpleweb/cover',
                 [
                     'title' => __('PurpleWeb Cover', 'purpleweb'),
                     'description' => __('PurpleWeb Cover with Image and Text'),
                     'categories' => ['cover'],
-                    'content' => ''
+                    'content' => $cover_content,
                 ]
             );
         }
