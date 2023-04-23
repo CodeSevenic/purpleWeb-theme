@@ -44,6 +44,15 @@ class Block_Patterns
                     'content' => $cover_content,
                 ]
             );
+            register_block_pattern(
+                'purpleweb/column',
+                [
+                    'title' => __('PurpleWeb Cover', 'purpleweb'),
+                    'description' => __('PurpleWeb Cover with Image and Text'),
+                    'categories' => ['cover'],
+                    'content' => $cover_content,
+                ]
+            );
         }
     }
 
