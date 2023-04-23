@@ -47,6 +47,11 @@ class Block_Patterns
         }
     }
 
+    /**
+     * Function to return pattern content
+     * @param $template_path
+     * @return bool|string
+     */
     public function get_template_content($template_path): bool|string
     {
         ob_start();
