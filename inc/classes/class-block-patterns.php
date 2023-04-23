@@ -45,7 +45,6 @@ class Block_Patterns
 
     public function register_block_pattern_categories()
     {
-
         $pattern_categories = [
             'cover' => __('Cover', 'purpleweb'),
             'carousel' => __('Carousel', 'purpleweb')
