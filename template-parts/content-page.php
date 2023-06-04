@@ -29,7 +29,7 @@
         ?>
     </div><!-- .entry-content -->
 
-    <footer>
+    <footer class="">
 
     </footer>
 
