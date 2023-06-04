@@ -18,8 +18,19 @@
     <div class="entry-content">
         <?php
         the_content();
-        
+        if(! is_home()) {
+            wp_link_pages(
+                [
+                    'before' => '<div class="page-links">' . esc_html__('Pages:', 'purpleWeb'),
+                    'after' => '</div>'
+                ]
+            );
+        }
         ?>
-    </div>
+    </div><!-- .entry-content -->
+
+    <footer>
+
+    </footer>
 
 </article>
